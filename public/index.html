@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מאיה - עוזרת טכנית Brother</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-info">
+                <h1>מאיה 🤖</h1>
+                <p>עוזרת טכנית Brother • מחוברת</p>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">M</div>
+                <div class="message-content">
+                    <p>שלום! אני מאיה 😊 איך אפשר לעזור לך עם המדפסת Brother?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <div class="message bot-message">
+                <div class="message-avatar">M</div>
+                <div class="message-content typing-content">
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-text">מאיה כותבת...</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <textarea 
+                id="messageInput" 
+                placeholder="הקלד/י הודעה כאן..." 
+                rows="1"
+                onkeypress="handleKeyPress(event)"
+            ></textarea>
+            <button onclick="sendMessage()" id="sendButton">
+                ➤
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
